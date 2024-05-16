@@ -3,6 +3,7 @@ public class DuplicateZeros {
 
     public static void duplicateZeros(int[] arr) {
         int n = arr.length;
+
         int i = 0;
 
         while (i < n) {
@@ -18,7 +19,7 @@ public class DuplicateZeros {
         }
 
         for (int k = 0; k < arr.length; k++) {
-            System.out.print(i + " ");
+            System.out.print(arr[k] + " ");
         }
     }
 
