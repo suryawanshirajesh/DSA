@@ -11,7 +11,6 @@ public class CanPlaceFlowers {
             if (--n == 0)
               return true;
           }
-    
         return false;
       }
 
@@ -19,6 +18,6 @@ public class CanPlaceFlowers {
          int [] flowerbed={1,0,0,0,1};
          int n=1;
         boolean result =canPlaceFlowers(flowerbed,n);
-        System.out.println(result);
+        System.out.println(result+'');
       }
 }
