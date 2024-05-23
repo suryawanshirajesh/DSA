@@ -5,44 +5,56 @@ import java.util.List;
 
 public class ThreeSum {
 
-    public static List<List<Integer>> threeSum(int[] nums) {
+    public List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-        Arrays.sort(nums);
-        for (int i = 0; i < nums.length - 2 && nums[i] <= 0; i++) {
-            if (i != 0 && nums[i] == nums[i - 1]) {
+        if (nums == null || nums.length < 3) {
+            return result;
+        }
+
+        Arrays.sort(nums);  // Step 1: Sort the array
+
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) {  // Skip duplicate elements
                 continue;
             }
-            twoSum(-nums[i], nums, i + 1, result);
+
+            int left = i + 1;
+            int right = nums.length - 1;
+
+            while (left < right) {
+                int sum = nums[i] + nums[left] + nums[right];
+
+                if (sum == 0) {
+                    result.add(Arrays.asList(nums[i], nums[left], nums[right]));
+
+                    // Move the left and right pointers to the next different numbers
+                    while (left < right && nums[left] == nums[left + 1]) {
+                        left++;
+                    }
+                    while (left < right && nums[right] == nums[right - 1]) {
+                        right--;
+                    }
+
+                    left++;
+                    right--;
+                } else if (sum < 0) {
+                    left++;
+                } else {
+                    right--;
+                }
+            }
         }
+
         return result;
     }
 
-    private static void twoSum(int target, int[] nums, int startIndex, List<List<Integer>> result) {
-        int i = startIndex;
-        int j = nums.length - 1;
-        while (i < j) {
-            if (nums[i] + nums[j] < target) {
-                i++;
-                continue;
-            }
-            if (nums[i] + nums[j] > target) {
-                j--;
-                continue;
-            }
-            result.add(Arrays.asList(-target, nums[i], nums[j]));
-            i++;
-            j--;
-            while (j > i && nums[j] == nums[j + 1]) {
-                j--;
-            }
-        }
-    }
-
     public static void main(String[] args) {
+        ThreeSum ts = new ThreeSum();
         int[] nums = {-1, 0, 1, 2, -1, -4};
-        List<List<Integer>> ls = threeSum(nums);
-        for (List<Integer> list : ls) {
-            System.out.println(list + " ");
+        List<List<Integer>> result = ts.threeSum(nums);
+
+        for (List<Integer> triplet : result) {
+            System.out.println(triplet + " ");
         }
     }
 }
