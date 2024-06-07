@@ -4,13 +4,13 @@ public class CountNumber {
     public static void frequencyCount(int arr[], int N, int P) {
 
         for (int i = 0; i < N; i++) {
-            int count = 0;
+
             for (int j = 1; j < N; j++) {
                 if (arr[i] == arr[j]) {
                     count++;
                 }
             }
-            arr[i] = count;
+
         }
         for (int i : arr) {
             System.out.print(i + " ");
