@@ -17,7 +17,6 @@ public class MostFrequestElement {
         }
         int maxFreq = 0, minFreq = length;
         int maxEle = 0, minEle = 0;
-
         for (Map.Entry<Integer, Integer> entry : hash.entrySet()) {
             int count = entry.getValue();
             int element = entry.getKey();
@@ -31,6 +30,7 @@ public class MostFrequestElement {
             }
         }
         System.out.println("The highest frequency element is: " + maxEle);
+
         System.out.println("The lowest frequency element is: " + minEle);
         return 0;
     }
