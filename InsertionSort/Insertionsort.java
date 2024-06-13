@@ -12,6 +12,7 @@ public class Insertionsort {
                 j--;
             }
         }
+        
         for (int elem : arr) {
             System.out.print(elem + " ");
         }
