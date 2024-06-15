@@ -17,11 +17,13 @@ public class MergSortDigram {
                 lt.add(arr[right]);
                 right++;
             }
+
         }
         while (left <= mid) {
             lt.add(arr[left]);
             left++;
         }
+        
         while (right <= high) {
             lt.add(arr[right]);
             right++;
