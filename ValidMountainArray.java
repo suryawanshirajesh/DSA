@@ -20,7 +20,7 @@ public class ValidMountainArray {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 4, 2, 1};
+        int[] arr = {1, 2, 3, 4, 5, 2, 1};
         boolean result = validMountainArrays(arr);
         System.out.println(result);
     }

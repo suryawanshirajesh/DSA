@@ -15,4 +15,4 @@ public class FactorialusingFuntionalrecursion {
         System.out.println(result);
     }
 }
-}
+
