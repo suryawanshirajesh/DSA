@@ -23,7 +23,7 @@ public class Quicksort{
         arr[high]=temp;
 
         return i+1;
-        
+
     };
 
     public static void main(String [] args){
@@ -40,6 +40,7 @@ public class Quicksort{
         System.out.println("\nSorted array:");
         for (int i : array) {
             System.out.print(i + " ");
+            
         }
     }
 }
