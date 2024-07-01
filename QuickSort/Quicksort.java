@@ -40,7 +40,6 @@ public class Quicksort{
         System.out.println("\nSorted array:");
         for (int i : array) {
             System.out.print(i + " ");
-            
         }
     }
 }
