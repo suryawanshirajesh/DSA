@@ -23,6 +23,7 @@ public class Quicksort{
         arr[high]=temp;
 
         return i+1;
+        
     };
 
     public static void main(String [] args){
