@@ -15,12 +15,12 @@ public class CheckPalindrome {
             return false;
         }
         return check(n + 1, s);
-    }
+    };
 
     public static void main(String[] args) {
         String st = "MADAM";
         // int n = 0;
         boolean result = check(st);
         System.out.print("Result: " + result);
-    }
+    };
 }
