@@ -12,7 +12,7 @@ public class ReversArray {
 
         Revers(start + 1, array, end - 1);
 
-    }
+    };
 
     public static void main(String[] args) {
         int[] arr = {1, 5, 8, 3, 4, 7};
@@ -21,5 +21,5 @@ public class ReversArray {
         for (int elem : arr) {
             System.out.print(elem + " ");
         }
-    }
+    };
 }
