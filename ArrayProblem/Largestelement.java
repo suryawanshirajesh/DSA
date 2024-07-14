@@ -1,7 +1,14 @@
 class Largestelement{
     public static int largeelement(int [] num){ 
-        System.out.print("Hello");
-        return 0;
+        int k=num[0];
+        int large=0;
+        for(int i=0;i<num.length;i++){
+           if(k<num[i]){
+           k=num[i];
+           }
+        }
+        System.out.println(k);
+        return large;
     }
 
     public static void main(String[] args){
