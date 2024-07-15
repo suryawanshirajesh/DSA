@@ -25,7 +25,7 @@ public class Secountlargestelement {
             if(Largestelement<integer){
                 Secoundelement=Largestelement;
                 Largestelement=integer;
-            }else if(Largestelement< Secoundelement &&Secoundelement<integer){
+            }else if(Largestelement>Secoundelement &&Secoundelement<integer){
                 Secoundelement=integer;
             }
         }
