@@ -14,8 +14,9 @@ public class TestRotateArray {
       for(int k=D;k<n;k++){
         nums[k-D]=nums[k];
       }
-     for(int i=0;i<D;i++){
-        nums[D+i]=temp[i];
+
+     for(int i=0;i<temp.length;i++){
+        nums[n-D+i]=temp[i];
      }
      for (int i : nums) {
             System.out.print(i + ", ");
@@ -23,7 +24,7 @@ public class TestRotateArray {
     }
     public static void main(String[] args) {
         int n,D=3;
-        int[] nums = { 3, 4, 5, 1, 22 };
+        int[] nums = { 3, 4, 5, 1, 22 ,78};
         n=nums.length;
         rotate(nums,D,n);
         // for (int i : nums) {
