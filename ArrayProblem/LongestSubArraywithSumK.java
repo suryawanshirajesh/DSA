@@ -29,8 +29,8 @@ public class LongestSubArraywithSumK {
     }
     public static void main(String[] args) {
         int k=15;
-        int arr[] = {-1, 2, 3};
-       // int [] arr={10, 5, 2, 7, 1, 9};
+        //int arr[] = {-1, 2, 3};
+        int [] arr={10, 5, 2, 7, 1, 9};
         int result=LongestSubArray(arr,k);
         System.out.println("Result :"+result);
     }
