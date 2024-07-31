@@ -20,7 +20,7 @@ public class SquaresofSortedArray {
         int [] nums = {-1,2,16,4,3};
         int [] result = sortedSquares(nums);
         for (int i : result) {
-            System.out.println(result);
+            System.out.println(i);
         }
     }
     
