@@ -2,7 +2,7 @@
 public class DuplicateZeros {
 
     public static void duplicateZeros(int[] arr) {
-        int n = arr.length;
+       // int n = arr.length;
         //int i = 0;
         // {1, 0, 2, 3, 0, 4, 5};
         for (int i = arr.length - 1; i >= 0; i--) {
