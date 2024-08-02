@@ -16,7 +16,7 @@ public class CanPlaceFlowers {
             }
         }
         return false;
-    }
+    };
 
     public static void main(String[] args) {
         int[] flowerbed = {1, 0, 0, 0, 1};
