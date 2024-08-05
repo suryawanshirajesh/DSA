@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class leaders {
@@ -14,6 +15,7 @@ public class leaders {
             }
             max=Math.max(max, arr[i]);
         }
+        Collections.reverse(list);
       return list;
     }
     public static void main(String[] args) {
