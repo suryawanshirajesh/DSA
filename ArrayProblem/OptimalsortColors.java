@@ -1,21 +1,26 @@
 public class OptimalsortColors {
     public static void sort(int [] arr){
-     int left=arr.length-1,right=0;
-     while (right<left) {
-        if(arr[right]>arr[left]){
-            int temp=arr[right];
-            arr[right]=arr[left];
-            arr[left]=temp;
-            right++;
-            left--;
+        int n=arr.length;
+        int low=0,mid=0,high=n-1;
+        while(mid<=high){
+            if(arr[mid]==0){
+                int temp=arr[mid];
+                arr[mid]=arr[low];
+                arr[low]=temp;
+                mid++;
+                low++;
+            }else if(arr[mid]==1){
+                mid++;
+            }else{
+                int temp=arr[mid];
+                arr[mid]=arr[high];
+                arr[high]=temp;
+                high--;
+            }
         }
-        if(arr[right]<=arr[left]){
-            right++;
-        }
-     }
     }
     public static void main(String[] args) {
-         int[] color= {1, 2, 0, 0, 1};
+        int[] color= {1, 2, 0, 0, 1,1,1,2};
          sort(color);
          for (int i : color) {
             System.out.print(i+" ,");
