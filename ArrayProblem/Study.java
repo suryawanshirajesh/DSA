@@ -16,7 +16,7 @@ public class Study {
    
     }
    public static void main(String[] args) {
-    int [] arr={-1,0,3,5,9,12};
+    int [] arr={-1,0,3,5,9,12,14};
     int target=0;
     int low=0,high=arr.length-1;
     int result =search(arr,low,high,target);
