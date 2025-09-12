@@ -20,7 +20,7 @@ public class leaders {
     }
     public static void main(String[] args) {
        int arr[] = {16,17,4,3,5,2};
-       List result = findleader(arr);
+       List<Integer> result = findleader(arr);
        for (Object object : result) {
           System.out.print(object+",");
        }
