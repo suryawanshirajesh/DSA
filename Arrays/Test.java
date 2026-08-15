@@ -1,4 +1,19 @@
 public class Test{
+        // Count of elements
+        public static int Countelements(int [] arr){
+            int element=0;int max= arr[0];
+            for(int n:arr){
+                if(n>max){
+                    max=n;
+                }
+            }
+            for(int i=0;i<arr.length;i++){
+                if(arr[i]<max){
+                    element++;
+                }
+            }
+            return element;
+        }
        //Time to equality
        public static int Timeequality(int [] arr){
         int time=0;
