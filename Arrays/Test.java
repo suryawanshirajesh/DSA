@@ -1,4 +1,18 @@
 public class Test{
+       //Time to equality
+       public static int Timeequality(int [] arr){
+        int time=0;
+        int max=arr[0];
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>max){
+                max=arr[i];
+            }
+        }
+        for(int i=0;i<arr.length;i++){
+            time += (max-arr[i]);
+        }
+        return  time;
+       }
       //Array Rotation
        public static void reverse(int [] arr,int si,int ei){
         while(si<ei){
