@@ -1,4 +1,58 @@
 public class Test{
+       // Pick from both sides!
+       public static int Pickfrombothsides(int []arr,int B){
+          int totalsum =0;
+          int n = arr.length;
+          int windowsum=0;
+          int maxsum=0;
+          int size = n-B;
+          for(int num:arr){
+            totalsum+=num;
+          }
+          for(int i=0;i<size;i++){
+            windowsum+=arr[i];
+          }
+         int index=0;
+          for(int i=size;i<n;i++){
+                 int ans = totalsum - windowsum;
+                 maxsum = Math.max(ans,maxsum);
+                 windowsum = windowsum-arr[index]+arr[i];
+                 index++;
+          }
+          return maxsum;
+       }
+
+        //Closest MinMax
+        public static int ClosestMinMax(int [] arr){
+            int minlength=arr.length;
+            int min=Integer.MAX_VALUE;
+            int max=Integer.MIN_VALUE;
+            for(int i=0;i<arr.length;i++){
+                if(min>arr[i]){
+                    min=arr[i];
+                }
+                if(max<arr[i]){
+                    max=arr[i];
+                }
+            }
+            int minindex=-1;int maxindex=-1;
+        
+            for(int i=0;i<arr.length;i++){
+              if(min==arr[i]){
+                minindex=i;
+                if(maxindex!=-1){
+                   minlength = Math.min(minlength,i-maxindex+1);
+                }
+              }
+              if(max==arr[i]){
+                maxindex=i;
+                if(minindex!=-1){
+                    minlength = Math.min(minlength,i-minindex+1);
+                }
+              }
+            }
+            return  minlength;
+        }
 
           // Equilibrium index of an array
          public static int Equilibrium(int [] arr){
@@ -105,9 +159,17 @@ public class Test{
         return  0;
       }
     public static void main(String [] args){
-        int [] arr = {-7, 1, 5, 2, -4, 3, 0};
-        int result = Equilibrium(arr);
-        System.out.println(result);
+        int [] arr ={5, -2, 3 , 1, 2};
+        int result = Pickfrombothsides(arr,3);
+         System.out.println(result);
+
+            // int [] arr ={2, 6, 1, 6, 9};
+            // int result = ClosestMinMax(arr);
+            // System.out.println(result);
+          
+        // int [] arr = {-7, 1, 5, 2, -4, 3, 0};
+        // int result = Equilibrium(arr);
+        // System.out.println(result);
 
         //   int [] arr ={1,2,3,4,5};
         //   int [][] query = {{0,3},{2,3}};
