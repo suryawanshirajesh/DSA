@@ -1,5 +1,23 @@
 public class Test{
 
+          // Equilibrium index of an array
+         public static int Equilibrium(int [] arr){
+            int totalsum=0;
+            int n=arr.length;
+            for(int k:arr){
+                totalsum+=k;
+            }
+            int leftsum=0;
+            for(int i=0;i<n;i++){
+                int rightsum = totalsum-leftsum-arr[i];
+                if(leftsum==rightsum){
+                    return i;
+                }
+                 leftsum+=arr[i];
+            }
+            return -1;
+         }
+
          //Range Sum Query
          public static int [] RangeSum(int []arr,int [][]query){
             int Q = query.length;
@@ -87,12 +105,16 @@ public class Test{
         return  0;
       }
     public static void main(String [] args){
-          int [] arr ={1,2,3,4,5};
-          int [][] query = {{0,3},{2,3}};
-          int [] result = RangeSum(arr, query);
-          for(int n:result){
-            System.out.println(n);
-          }
+        int [] arr = {-7, 1, 5, 2, -4, 3, 0};
+        int result = Equilibrium(arr);
+        System.out.println(result);
+
+        //   int [] arr ={1,2,3,4,5};
+        //   int [][] query = {{0,3},{2,3}};
+        //   int [] result = RangeSum(arr, query);
+        //   for(int n:result){
+        //     System.out.println(n);
+        //   }
 
         //    int [] arr = {1,2,3,4};
         //    int k=2;
